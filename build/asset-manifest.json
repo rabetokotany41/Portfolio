@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b4895b9e.css",
+    "main.js": "/static/js/main.74281b95.js",
+    "static/media/enzo.png": "/static/media/enzo.b3e9bf8dfa00d3686f52.png",
+    "static/media/logo.png": "/static/media/logo.901a72e4171ae3045843.png",
+    "index.html": "/index.html",
+    "main.b4895b9e.css.map": "/static/css/main.b4895b9e.css.map",
+    "main.74281b95.js.map": "/static/js/main.74281b95.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b4895b9e.css",
+    "static/js/main.74281b95.js"
+  ]
+}
