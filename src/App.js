@@ -132,6 +132,21 @@ function App() {
     }
   };
 
+  // Fonction pour ouvrir les liens sociaux
+  const openSocialLink = (platform) => {
+    const urls = {
+      linkedin: 'https://www.linkedin.com/in/rabetokotanyenzo',
+      github: 'https://github.com/rabetokotany41',
+      twitter: 'https://twitter.com',
+      instagram: 'https://www.instagram.com/enzoloic21/'
+    };
+    
+    const url = urls[platform.toLowerCase()];
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-gray-100' : 'bg-gray-50 text-gray-900'} overflow-x-hidden`}>
       {/* Header */}
@@ -304,22 +319,46 @@ function App() {
                   </a>
                 </li>
                 <li className="flex space-x-3 pt-2">
-                  {['LinkedIn', 'GitHub', 'Twitter', 'Instagram'].map((social) => (
-                    <a
-                      key={social}
-                      href="#"
-                      className={`p-2 rounded-lg transition-all duration-300 transform hover:scale-110 ${darkMode
-                          ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700'
-                          : 'bg-gray-100 text-gray-600 hover:text-black hover:bg-gray-200'
-                        }`}
-                      aria-label={social}
-                    >
-                      {social === 'LinkedIn' ? <FaLinkedin /> :
-                       social === 'GitHub' ? <FaGithub /> :
-                       social === 'Twitter' ? <FaTwitter /> :
-                       <FaInstagram />}
-                    </a>
-                  ))}
+                  <button
+                    onClick={() => openSocialLink('linkedin')}
+                    className={`p-2 rounded-lg transition-all duration-300 transform hover:scale-110 ${darkMode
+                        ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700'
+                        : 'bg-gray-100 text-gray-600 hover:text-black hover:bg-gray-200'
+                      }`}
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin />
+                  </button>
+                  <button
+                    onClick={() => openSocialLink('github')}
+                    className={`p-2 rounded-lg transition-all duration-300 transform hover:scale-110 ${darkMode
+                        ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700'
+                        : 'bg-gray-100 text-gray-600 hover:text-black hover:bg-gray-200'
+                      }`}
+                    aria-label="GitHub"
+                  >
+                    <FaGithub />
+                  </button>
+                  <button
+                    onClick={() => openSocialLink('twitter')}
+                    className={`p-2 rounded-lg transition-all duration-300 transform hover:scale-110 ${darkMode
+                        ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700'
+                        : 'bg-gray-100 text-gray-600 hover:text-black hover:bg-gray-200'
+                      }`}
+                    aria-label="Twitter"
+                  >
+                    <FaTwitter />
+                  </button>
+                  <button
+                    onClick={() => openSocialLink('instagram')}
+                    className={`p-2 rounded-lg transition-all duration-300 transform hover:scale-110 ${darkMode
+                        ? 'bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700'
+                        : 'bg-gray-100 text-gray-600 hover:text-black hover:bg-gray-200'
+                      }`}
+                    aria-label="Instagram"
+                  >
+                    <FaInstagram />
+                  </button>
                 </li>
               </ul>
             </div>
